@@ -1,68 +1,94 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+#root {
+  width: 100%;
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family:sans-serif;
+  background-color: rgb(20, 20, 20);
+  margin: 0;
+  color: goldenrod;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: black;
+  -webkit-text-stroke: 1px goldenrod;
+  text-align: center;
+  box-shadow: 0px 2px 5px goldenrod;
+  overflow: hidden;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://hips.hearstapps.com/roadandtrack/assets/17/13/1490615777-bugatti.gif") center/cover no-repeat;
+  opacity: 0.3; 
+  z-index: -1;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#dropDown {
+  width: 120px;
+  height: 25px;
+  background-color: rgb(32, 32, 32);
+  color: goldenrod;
+  margin-top: 20px;
+}
+
+#cardContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#brandName {
+  color: black;
+  -webkit-text-stroke: 1px goldenrod;
+  font-size: 40px;
+}
+
+#vehicleCard {
+  width: 350px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px black;
+  background-color: rgb(43, 43, 43);
+  color: goldenrod;
+  text-decoration: none;
+}
+
+#vehicleCard:hover {
+  transition: 300ms;
+  box-shadow: 0px 0px 10px goldenrod;
+}
+
+#backButton {
+  background: black;
+  color: goldenrod;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 50px;
+  margin: 50px;
+  width: 100px;
+  border-color: goldenrod;
+}
+
+#backButton:hover {
+  background-color: rgb(29, 29, 29);
 }
